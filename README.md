@@ -30,35 +30,11 @@ Root Finding (Bisection Method): A mathematical approach used to calculate the s
 
 The system enforces the following logic thresholds:
 
-Condition
-
-Humidity Range
-
-Action
-
-Critical High
-
-$> 60\%$
-
-Trigger High Alarm + Start Dehumidifier
-
-Optimal
-
-$40\% - 50\%$
-
-System Idle / Status OK
-
-Critical Low
-
-$< 20\%$
-
-Trigger Low Alarm + Start Humidifier
-
-Sensor Error
-
-Outside $0-100\%$
-
-Panic Halt / Maintenance Mode
+| Condition | Humidity Range | Action |
+| Critical High | $> 60\%$ | Trigger High Alarm + Start Dehumidifier |
+| Optimal | $40\% - 50\%$ | System Idle / Status OK |
+| Critical Low | $< 20\%$ | Trigger Low Alarm + Start Humidifier |
+| Sensor Error | Outside $0-100\%$ | Panic Halt / Maintenance Mode |
 
 📦 How to Run
 
@@ -71,6 +47,7 @@ Run the simulation using:
 cargo run
 
 
+
 📝 Example Output
 
 The terminal will display real-time statistics including:
@@ -78,6 +55,12 @@ The terminal will display real-time statistics including:
 Calibrated Value: The immediate "true" reading.
 
 Moving Average: The smoothed trend value.
+
+Prediction: Based on linear regression (e.g., "Humidity is rising at 0.5%/cycle").
+
+Actuator Status: Current state of the server room climate control hardware.
+
+Developed for College Instrumentation Project - Data Center Environmental Control.
 
 Prediction: Based on linear regression (e.g., "Humidity is rising at 0.5%/cycle").
 
